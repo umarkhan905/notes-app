@@ -14,3 +14,8 @@ app.use(
 // Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Routes
+import noteRoutes from "./routes/note.route.js";
+
+app.use("/api/v1/notes", noteRoutes);
