@@ -1,7 +1,8 @@
 import { app } from "./app.js";
 import { connectDB } from "./config/db.config.js";
+import { env } from "./config/env.config.js";
 
-const port = process.env.PORT || 3000;
+const port = env.PORT || 3000;
 
 connectDB().then(() => {
   app.listen(port, () => {
